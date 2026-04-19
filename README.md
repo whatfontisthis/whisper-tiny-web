@@ -2,6 +2,12 @@
 
 Offline speech-to-text in the browser using [Transformers.js](https://huggingface.co/docs/transformers.js) + local ONNX models.
 
+## Live Demo
+
+https://whatfontisthis.github.io/whisper-tiny-web/
+
+On the hosted demo models are fetched from Hugging Face on first load (cached in IndexedDB). For fully offline use, clone and run locally with the download script below.
+
 ## Setup
 
 ```bash
