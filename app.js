@@ -1,7 +1,8 @@
 import { pipeline, env } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.0.2";
 
-env.allowLocalModels = true;
-env.allowRemoteModels = true;
+const isLocalDev = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+env.allowLocalModels = isLocalDev;
+env.allowRemoteModels = !isLocalDev;
 env.localModelPath = "./models/";
 env.backends.onnx.wasm.wasmPaths = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.0.2/dist/";
 
