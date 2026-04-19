@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+*.log
+.vscode/
+.idea/
+
+# Model weights — too large for git. Run ./download-models.sh to fetch.
+models/
